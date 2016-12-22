@@ -61,6 +61,7 @@ class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         // Find the TextView with view ID magnitude
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
         // Format the magnitude to show 1 decimal place
+        assert currentEarthquake != null;
         String formattedMagnitude = formatMagnitude(currentEarthquake.getMagnitude());
         // Display the magnitude of the current earthquake in that TextView
         magnitudeView.setText(formattedMagnitude);
